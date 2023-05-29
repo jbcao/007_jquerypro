@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>dom对象转为jQuery</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+			function f(){
+				var b=document.getElementById("b");
+				alert("按钮的值"+b.value);
+				// 将dom对象转换为jquery对象
+				var $b=$(b);
+				alert($b.val());
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="我是按钮" id="b" onclick="f()"/>
+	</body>
+</html>

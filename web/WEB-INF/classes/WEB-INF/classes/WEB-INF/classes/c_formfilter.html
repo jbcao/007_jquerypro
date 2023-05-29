@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+$(function(){
+	// 先绑定事件
+	// 然后在事件处理函数中用过滤器，筛选dom,然后进行处理
+	$("#b1").click(function(){
+		// val()函数可以带参数，进行设置值
+		$(":text:enabled").val("hello");
+	})
+	$("#b2").click(function(){
+		var $obj=$(":checkbox:checked");
+		for(var i=0;i<$obj.length;i++){
+			alert($obj[i].value);	
+		}
+	})
+	$("#b3").click(function(){
+		// 这里是标签选择器
+		// 也可以使用id选择器
+		//var $obj=$("select>option:selected");
+		var $obj=$("#xl>option:selected");
+		alert($obj.val());
+	})
+	
+})
+		</script>
+	<body>
+		<input type='text' id="t1" value="t1"/><br/>
+		<input type='text' id="t2" value="t2" disabled/><br/>
+		<input type='text' id="t3" value="t3"/><br/>
+		<!-- 可以使用disabled,也可以使用disabled="true" -->
+		<input type='text' id="t4" value="t4" disabled="true"/><br/>
+		<input type="checkbox" value="游泳"/>游泳<br/>
+		<!-- 这里可以使用checked也可以使用checked="true" -->
+		<input type="checkbox" value="健身" checked="true"/>健身<br/>
+		<!-- 单选按钮如果默认选中了，就无法进行修改了 -->
+		<input type="radio" value="扑克" checked/>扑克<br/>
+		<select id="xl">
+			<option value="java">java</option>
+			<!-- 这里可以使用selected 也可以使用selected="true" -->
+			<option value="py" selected="true" >python</option>
+			<option value="go">go</option>
+		</select><br>
+		<!-- 这个标签和input的最大区别是就是没有type属性，使用上有一点区别，其他都没有区别 -->
+		<button id="b1">所有可用的text设置value位hello</button><br/>
+		<input type="button" id="b2" value="显示被选中的复选框的值" /><br>
+		<input type="button" id="b3" value="显示下拉框的值" /><br>
+	</body>
+</html>

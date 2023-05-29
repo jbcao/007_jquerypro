@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="t1" value="aaaaaaaaaaaa"><br/>
+<input type="text" id="t2" value="bbbbbbbbbbbb"><br/>
+<input type="button" value="获取按钮1的value" onclick="f1()"><br/>
+<input type="button" value="获取按钮2的value" onclick="f2()"><br/>
+
+</body>
+</html>
+<script type="text/javascript" language="JavaScript">
+    function f1() {
+        var t1 = document.getElementById("t1");
+        alert(t1.value)
+    }
+
+    function f2() {
+        var t2 = $("t2");
+        alert(t2.value)
+
+    }
+// 为了提高这个方法的辨识度，所以将这个方法名定义为$
+// 作用就是为了获得dom对象，
+// 简化对dom对象的获取方式
+
+    function $(dom) {
+        var d = document.getElementById(dom);
+        return d;
+    }
+</script>

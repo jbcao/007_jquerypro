@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+$(function(){
+	$("#b1").click(function(){
+		$("select").remove();
+	})
+	$("#b2").click(function(){
+		$("select").empty();
+	})
+	$("#b3").click(function(){
+		$("#father").append("<input type='text' value='我是动态添加的input'/>");
+	})
+	$("#b4").click(function(){
+		alert($("span").html());
+	})
+	$("#b5").click(function(){
+		$("span").html("我是span标签")
+	})
+}
+)
+		</script>
+	</head>
+	<body>
+		<select>
+			<option value="h1">h1
+			</option>
+			<option value="h2">h2
+			</option>
+			<option value="h3">h3
+			</option>
+		</select>
+		<br>
+		<select>
+			<option value="b1">h1
+			</option>
+			<option value="b2">h2
+			</option>
+			<option value="b3">h3
+			</option>
+		</select>
+		<br>
+		<div id="father" style="background: red;">我是父div</div>
+		<span>我是一个<b>数据库<b/></span><br>
+		<span>oracle也是数据库</span><br>
+		<input type="button" value="remove删除select父子元素" id="b1"><br>
+		<input type="button" value="remove删除select子元素" id="b2"><br>
+		<input type="button" value="添加元素" id="b3"><br>
+		<input type="button" value="获取第一个span内容" id="b4"><br>
+		<input type="button" value="修改span内容" id="b5"><br>
+	</body>
+</html>

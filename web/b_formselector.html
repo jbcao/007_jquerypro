@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script>
+			function f1() {
+				
+				var $obj=$(":text");
+				alert($obj.val());
+			}
+
+			function f2() {
+		
+				var $obj=$(":radio");
+				for(var i=0;i<$obj.length;i++){
+					var obj=$obj[i];
+					alert(obj.value);
+				}
+			}
+
+			function f3() {
+	
+				var $obj=$(":checkbox");
+				for(var i=0;i<$obj.length;i++){
+					var obj=$obj[i];
+					alert(obj.value);
+					// 使用jquery对象,来获取值，需要将dom对象转换成jquery对象
+					alert($(obj).val());
+				}
+			}
+		</script>
+	</head>
+	<body>
+		文本框：<input type="text" value="我是text" /><br>
+		性别：<br>
+		<input type="radio" value="man" />男<br>
+		<input type="radio" value="woman" />女<br>
+		爱好：<br>
+		<input type="checkbox" value="bike" />骑车<br>
+		<input type="checkbox" value="football" />足球<br>
+		<input type="checkbox" value="music" />音乐<br>
+		<input type='button' value='读text值' onclick="f1()" /><br />
+		<input type='button' value='读单选按钮' onclick="f2()" /><br />
+		<input type='button' value='读多选按钮值' onclick="f3()" /><br />
+	</body>
+</html>

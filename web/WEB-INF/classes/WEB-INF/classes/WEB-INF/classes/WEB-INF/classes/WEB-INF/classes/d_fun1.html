@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background: greenyellow;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script>
+			$(function() {
+				$("#b1").click(function() {
+					var $obj = $(":text").val();
+					alert($obj);
+				})
+				$("#b2").click(function() {
+					$(":text").val("三国演义")
+				})
+				$("#b3").click(function() {
+					alert($("div").text());
+				})
+				$("#b4").click(function() {
+					alert($("div:first").text());
+				})
+				$("#b5").click(function() {
+					$("div").text("我是小强")
+				})
+				$("#b6").click(function(){
+					//alert($("img").attr("src"));
+					// 这里一个符号写错了，花2个小时进行调试，所以，能copy,还是copy
+					$("img").attr("src","img/dt.jpg");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" value="刘备" /><br>
+		<input type="text" value="关羽" /><br>
+		<input type="text" value="张飞" /><br>
+		<div>我是第1个div</div><br />
+		<div>我是第2个div</div><br />
+		<div>我是第3个div</div><br />
+		<img src="./img/xt.jpg"/><br>
+		<input type="button" id="b1" value="获取第一个文本框的值" /><br />
+		<input type="button" id="b2" value="设置所有文本框为新值" /><br />
+		<input type="button" id="b3" value="获取div所有文本" /><br />
+		<input type="button" id="b4" value="获取第一个div的文本" /><br />
+		<input type="button" id="b5" value="设置div新文本" /><br />
+		<input type="button" id="b6" value="设置img图片" /><br />
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background: gray;
+				width: 200px;
+				height: 100px;
+			}
+			.two{
+				background: gold;
+				font-size: 20pt;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script>
+			function f1() {
+				//id选择器
+				$("#one").css("background", "blue");
+			}
+
+			function f2() {
+				//class选择器
+				$(".two").css("background", "black");
+			}
+
+			function f3() {
+				//标签选择器
+				//jquery中的操作都是操作数组中的全部成员
+				//所以是给所有的div都设置的背景色
+				$("div").css("background", "orange");
+			}
+			function f4(){
+				$("*").css("background","green")
+			}
+			function f5(){
+				$("#one,span").css("background","red");
+			}
+		</script>
+	</head>
+	<body>
+		<div id='one'>我是one</div>
+		<div class='two'>我是two</div>
+		<div>我是没有id,也没有样式的div</div>
+		<span>我是一行数据</span><br />
+		<input type='button' value='id选择器' onclick="f1()" /><br />
+		<input type='button' value='class选择器' onclick="f2()" /><br />
+		<input type='button' value='tah选择器' onclick="f3()" /><br />
+		<input type='button' value='全部选择器' onclick="f4()" /><br />
+		<input type='button' value='组合选择器' onclick="f5()" /><br />
+	</body>
+</html>

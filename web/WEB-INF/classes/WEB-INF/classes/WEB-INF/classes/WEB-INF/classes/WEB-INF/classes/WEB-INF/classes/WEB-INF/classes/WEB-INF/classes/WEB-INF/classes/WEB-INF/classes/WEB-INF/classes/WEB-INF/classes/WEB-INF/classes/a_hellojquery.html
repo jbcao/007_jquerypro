@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第一个例子 </title>
+		<!-- 指定jquery的库文件位置，我们使用的是相对路径 -->
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript" >
+			$(document).ready(function(){
+				alert("hello jequey")
+			})
+			// 这个方法和上面是等价的
+			// 上面的是标准方法
+			// 这是一个简写方法
+			// 实际过程中，比较习惯使用下面这种简写
+			$(function(){
+				alert("hello jequey")
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#b1").click(function() {
+					$("#f").append("<input type='button' value=' 新增的按钮' id='b2'/>");
+					$("#b2").click(function() {
+						alert("kkk")
+					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="f">
+			将在这里创建一个按钮，
+		</div>
+		<input type="button" value="增加一个button" id="b1"><br>
+	</body>
+</html>

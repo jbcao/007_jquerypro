@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#b1").click(function() {
+					var arr = [1, 4, 33];
+					$.each(arr, function(index, element) {
+						alert("第" + index + "值为" + element);
+					})
+				})
+				$("#b2").click(function() {
+					var json = {
+						"name": "xiaoming",
+						"age": 199
+					};
+					$.each(json, function(i, n) {
+						alert("i是key" + i + "  ,n是value" + n)
+					})
+				})
+				$("#b3").click(function() {
+					var qarr = $(":text");
+					$.each(qarr, function(i, n) {
+						alert("i是数组索引" + i + "n是dom对象" + n.value);
+					})
+				})
+				$("#b4").click(function() {
+					$(":text").each(function(i, n) {
+						alert("i是数组索引" + i + "n是dom对象" + n.value);
+					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" value="刘备" /><br>
+		<input type="text" value="张飞" /><br>
+		<input type="text" value="关羽" /><br>
+		<input type="button" value="each遍历普通数组" id="b1"><br>
+		<input type="button" value="each遍历json" id="b2"><br>
+		<input type="button" value="each遍历dom数组" id="b3"><br>
+		<input type="button" value="each遍历jquery对象" id="b4"><br>
+	</body>
+</html>
